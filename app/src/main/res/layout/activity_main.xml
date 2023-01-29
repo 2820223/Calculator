@@ -16,7 +16,7 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -31,34 +31,34 @@
             app:cornerRadius="24dp"
 
             app:layout_constraintBottom_toTopOf="@+id/seven"
-            app:layout_constraintEnd_toStartOf="@+id/degree"
+            app:layout_constraintEnd_toStartOf="@+id/boshi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5"></com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/degree"
+            android:id="@+id/boshi"
             android:layout_width="71.75dp"
             android:layout_height="72dp"
             android:backgroundTint="#D2D3DA"
-            android:text="^"
+            android:text="@string/boshi"
             android:textColor="@color/black"
             android:textSize="25dp"
             app:cornerRadius="24dp"
             app:layout_constraintBottom_toTopOf="@+id/eight"
-            app:layout_constraintEnd_toStartOf="@+id/percent"
+            app:layout_constraintEnd_toStartOf="@+id/oxiri"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/clear_all"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.489"></com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/percent"
+            android:id="@+id/oxiri"
             android:layout_width="71.75dp"
             android:layout_height="72dp"
             android:backgroundTint="#D2D3DA"
-            android:text="%"
+            android:text="@string/oxiri"
             android:textColor="@color/black"
             android:textSize="25dp"
             app:cornerRadius="24dp"
@@ -81,7 +81,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/minus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.88"
-            app:layout_constraintStart_toEndOf="@+id/degree"
+            app:layout_constraintStart_toEndOf="@+id/boshi"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.11"></com.google.android.material.button.MaterialButton>
 
@@ -114,7 +114,7 @@
             app:layout_constraintEnd_toStartOf="@+id/nine"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/seven"
-            app:layout_constraintTop_toBottomOf="@id/degree"
+            app:layout_constraintTop_toBottomOf="@id/boshi"
             app:layout_constraintVertical_bias="0.487"></com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
@@ -147,7 +147,7 @@
             app:layout_constraintEnd_toStartOf="@+id/multiplying"
             app:layout_constraintHorizontal_bias="0.917"
             app:layout_constraintStart_toEndOf="@id/eight"
-            app:layout_constraintTop_toBottomOf="@+id/percent"
+            app:layout_constraintTop_toBottomOf="@+id/oxiri"
             app:layout_constraintVertical_bias="0.109"></com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton

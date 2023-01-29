@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.isDigitsOnly
+import com.example.calculator.R.id.oxiri
 
 class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var one: Button
@@ -24,17 +25,19 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var plus: Button
     private lateinit var minus: Button
+    private lateinit var boshi: Button
+    private lateinit var oxiri: Button
 
     private lateinit var clear: Button
     private lateinit var point: Button
 
 
     private lateinit var operand: TextView
-
+    private lateinit var result: TextView
     private var ispoint = true
     private var isdigit = false
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,10 +55,11 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
 
         plus = findViewById(R.id.plus)
         minus = findViewById(R.id.minus)
-
+boshi = findViewById(R.id.boshi)
+        oxiri= findViewById(R.id.oxiri)
         clear = findViewById(R.id.clear_all)
         point = findViewById(R.id.point)
-
+result = findViewById(R.id.result)
         operand = findViewById(R.id.operand)
 
         one.setOnClickListener(this)
@@ -78,6 +82,7 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     @SuppressLint("SetTextI18n")
+
     fun addSimvol(simvol: String) {
         if (isdigit) {
             operand.text = operand.text.toString() + simvol
@@ -91,9 +96,9 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         }
         ispoint = true
     }
-
+    val list = mutableListOf<Any>()
     fun arr(s: String): MutableList<Any> {
-        val list = mutableListOf<Any>()
+
         var temp = ""
         for (i in s) {
             if (i.isDigit() || i.equals(".")) {
@@ -108,8 +113,22 @@ class CalculatorActivity : AppCompatActivity(), View.OnClickListener {
         if (temp.isNotEmpty()){
             list.add(temp)
         }
+
         Log.d("list", list.toString())
 
         return list
+    }
+    fun add(){
+       for (i in 0..list.size){
+           var index=i
+               if (list[i].equals("+")){
+                   if(list[index++] != "*" && list[index++] != "/"){
+                       result = list[i-1].to(Int)+list[i+1].to(Int)
+                   }
+
+
+
+           }
+       }
     }
 }
